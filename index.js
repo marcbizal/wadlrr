@@ -1,3 +1,5 @@
-var WAD = require('./lib/wad.js').WAD;
+const wad = require('./lib/wad.js');
 
-var LegoRR1 = new WAD('./LegoRR1.wad', function() {});
+wad.load('./LegoRR1.wad').then((LegoRR1) => {
+	return wad.get('./LegoRR1.wad', LegoRR1, 'credits.txt');
+}).then((buffer) => { console.log(buffer.toString()); });
