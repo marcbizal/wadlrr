@@ -3,6 +3,12 @@
   "version": "0.1.0",
   "description": "An interface for creating, extracting, modifying, and reading LRR WAD files.",
   "main": "index.js",
+  "eslintConfig": {
+    "extends": "airbnb-base",
+    "env": {
+      "node": true
+    }
+  },
   "scripts": {
     "test": "mocha ./test/wad.test.js"
   },
@@ -18,9 +24,14 @@
   "homepage": "https://github.com/marcbizal/node-wad#readme",
   "devDependencies": {
     "chai": "^3.5.0",
-    "mocha": "^3.2.0"
+    "eslint": "^3.16.1",
+    "eslint-config-airbnb-base": "^11.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "mocha": "^3.2.0",
+    "mocha-eslint": "^3.0.1"
   },
   "dependencies": {
-    "binary-parser": "^1.1.5"
+    "binary-parser": "^1.1.5",
+    "fs-promise": "^2.0.0"
   }
 }
