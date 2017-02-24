@@ -33,7 +33,7 @@ describe('WAD', () => {
 
   it('should return a buffer representing text given the path \'credits.txt\'', () => {
     wad.getObjectAtPath('./LegoRR1.wad', LegoRR1, 'credits.txt')
-      .then(credits => Promise.all([fsp.readFile('credits.txt'), credits]))
+      .then(credits => Promise.all([fsp.readFile('./test/credits.txt'), credits]))
       .then(([control, credits]) => expect(credits).to.deep.equal(control))
       .catch(console.log);
   });

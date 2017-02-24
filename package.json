@@ -17,14 +17,15 @@
     "type": "git",
     "url": "git+https://github.com/marcbizal/node-wad.git"
   },
-  "author": "Marcus Bizal <hello@marcbizal.com>",
-  "license": "ISC",
+  "author": "Marcus Bizal <hello@marcbizal.com> (http://marcbizal.com)",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/marcbizal/node-wad/issues"
   },
   "homepage": "https://github.com/marcbizal/node-wad#readme",
   "devDependencies": {
     "chai": "^3.5.0",
+    "documentation": "^4.0.0-beta.18",
     "eslint": "^3.16.1",
     "eslint-config-airbnb-base": "^11.1.0",
     "eslint-plugin-import": "^2.2.0",
