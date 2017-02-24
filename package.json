@@ -15,14 +15,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/marcbizal/node-wad.git"
+    "url": "git+https://github.com/marcbizal/wadlrr.git"
   },
   "author": "Marcus Bizal <hello@marcbizal.com> (http://marcbizal.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/marcbizal/node-wad/issues"
+    "url": "https://github.com/marcbizal/wadlrr/issues"
   },
-  "homepage": "https://github.com/marcbizal/node-wad#readme",
+  "homepage": "https://github.com/marcbizal/wadlrr#readme",
   "devDependencies": {
     "chai": "^3.5.0",
     "documentation": "^4.0.0-beta.18",
