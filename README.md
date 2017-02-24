@@ -1,4 +1,4 @@
-# wadlrr ![Build Status](https://travis-ci.com/marcbizal/wadlrr.svg?token=mABEpk1bXrf7VZkfebmt&branch=master)
+# wadlrr ![Build Status](https://travis-ci.com/marcbizal/wadlrr.svg?token=mABEpk1bXrf7VZkfebmt&branch=master) [![Coverage Status](https://coveralls.io/repos/github/marcbizal/wadlrr/badge.svg?branch=master)](https://coveralls.io/github/marcbizal/wadlrr?branch=master)
 
 A Node.js interface for creating, extracting, modifying, and reading LRR WAD files.
 
