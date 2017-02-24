@@ -10,7 +10,7 @@
     }
   },
   "scripts": {
-    "test": "mocha ./test/wad.test.js",
+    "test": "istanbul cover _mocha -- -R spec",
     "docs": "documentation readme index.js --section=API"
   },
   "repository": {
@@ -29,6 +29,7 @@
     "eslint": "^3.16.1",
     "eslint-config-airbnb-base": "^11.1.0",
     "eslint-plugin-import": "^2.2.0",
+    "istanbul": "^0.4.5",
     "mocha": "^3.2.0",
     "mocha-eslint": "^3.0.1"
   },
