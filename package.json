@@ -10,7 +10,8 @@
     }
   },
   "scripts": {
-    "test": "mocha ./test/wad.test.js"
+    "test": "mocha ./test/wad.test.js",
+    "docs": "documentation readme index.js --section=API"
   },
   "repository": {
     "type": "git",
