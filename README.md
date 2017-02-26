@@ -13,10 +13,20 @@ This function finds the index of a given path in a WAD file.
 **Parameters**
 
 -   `wadMeta` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** any valid WAD metadata object
--   `path` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** the relative path of a file contained in the WAD
--   `relPath`  
+-   `relPath` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** the relative path of a file contained in the WAD
 
 Returns **[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)** resolves to the index that the file was found at
+
+### exists
+
+This function checks if a file exists given path in a WAD file.
+
+**Parameters**
+
+-   `wadMeta` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** any valid WAD metadata object
+-   `relPath` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** the relative path of the file in question
+
+Returns **[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)** resolves to a boolean
 
 ### getDataForObject
 
@@ -24,7 +34,7 @@ This function reads data for a given object from an open WAD file.
 
 **Parameters**
 
--   `fd` **Integer** file descriptor for the open WAD file
+-   `fd` **[Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** file descriptor for the open WAD file
 -   `object` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** the object's metadata
 
 Returns **[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)** resolves to a buffer containing the object data
@@ -37,8 +47,7 @@ or throws an error if the file doesn't exist.
 **Parameters**
 
 -   `wadMeta` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** any valid WAD metadata object
--   `path` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** the relative path of a file contained in the WAD
--   `relPath`  
+-   `relPath` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** the relative path of a file contained in the WAD
 
 Returns **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** resolves to the object metadata
 
@@ -71,9 +80,7 @@ This function extracts all files from a given WAD.
 **Parameters**
 
 -   `wadMeta` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** any valid WAD metadata object
--   `outputPath` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)?=  'r'))
-            .then((fd) => {
-          ** the base output path
+-   `outputPath` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** the base output path
 
 Returns **[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)** resolves when all files have been extracted
 
