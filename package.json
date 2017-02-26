@@ -1,6 +1,6 @@
 {
   "name": "wadlrr",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "An interface for creating, extracting, modifying, and reading LRR WAD files.",
   "main": "index.js",
   "eslintConfig": {
@@ -10,7 +10,9 @@
     }
   },
   "scripts": {
-    "test": "istanbul cover _mocha -- -R spec",
+    "test": "mocha",
+    "cover": "istanbul cover _mocha",
+    "coveralls": "npm run cover -- --report lcovonly && cat ./coverage/lcov.info | coveralls",
     "docs": "documentation readme index.js --section=API"
   },
   "repository": {
@@ -25,18 +27,17 @@
   "homepage": "https://github.com/marcbizal/wadlrr#readme",
   "devDependencies": {
     "chai": "^3.5.0",
-    "coveralls": "^2.11.16",
     "documentation": "^4.0.0-beta.18",
     "eslint": "^3.16.1",
     "eslint-config-airbnb-base": "^11.1.0",
     "eslint-plugin-import": "^2.2.0",
     "istanbul": "^0.4.5",
     "mocha": "^3.2.0",
-    "mocha-eslint": "^3.0.1",
-    "mocha-lcov-reporter": "^1.3.0"
+    "mocha-eslint": "^3.0.1"
   },
   "dependencies": {
     "binary-parser": "^1.1.5",
+    "fs-extra": "^2.0.0",
     "fs-promise": "^2.0.0"
   }
 }

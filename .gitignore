@@ -38,3 +38,7 @@ jspm_packages
 
 # Coveralls key
 .coveralls.yml
+
+# Files extracted by examples
+examples/*
+!examples/example*.js
