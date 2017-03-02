@@ -15,7 +15,7 @@ This function finds the index of a given path in a WAD file.
 -   `wadMeta` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** any valid WAD metadata object
 -   `relPath` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** the relative path of a file contained in the WAD
 
-Returns **[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)** resolves to the index that the file was found at
+Returns **[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)>** resolves to the index that the file was found at
 
 ### exists
 
@@ -26,9 +26,9 @@ This function checks if a file exists given path in a WAD file.
 -   `wadMeta` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** any valid WAD metadata object
 -   `relPath` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** the relative path of the file in question
 
-Returns **[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)** resolves to a boolean
+Returns **[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[Boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)>** resolves to a boolean
 
-### getDataForObject
+### getObjectFromFile
 
 This function reads data for a given object from an open WAD file.
 
@@ -37,7 +37,7 @@ This function reads data for a given object from an open WAD file.
 -   `fd` **[Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** file descriptor for the open WAD file
 -   `object` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** the object's metadata
 
-Returns **[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)** resolves to a buffer containing the object data
+Returns **[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[Buffer](https://nodejs.org/api/buffer.html)>** resolves to a buffer containing the object data
 
 ### getObjectMeta
 
@@ -60,7 +60,7 @@ This function reads a buffer from a given WAD that represents the actual object 
 -   `wadMeta` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** any valid WAD metadata object
 -   `object` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** the object's metadata
 
-Returns **[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)** resolves to a buffer containing the object data
+Returns **[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[Buffer](https://nodejs.org/api/buffer.html)>** resolves to a buffer containing the object data
 
 ### getObjectAtPath
 
@@ -69,9 +69,31 @@ This function reads a buffer that represents object data at a given path.
 **Parameters**
 
 -   `wadMeta` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** any valid WAD metadata object
--   `relPath` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** the object's metadata
+-   `relPath` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** the object's internal path
 
-Returns **[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)** resolves to a buffer containing the object data
+Returns **[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[Buffer](https://nodejs.org/api/buffer.html)>** resolves to a buffer containing the object data
+
+### getObjectStream
+
+This function gets a read stream for a given object
+
+**Parameters**
+
+-   `wadMeta` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** any valid WAD metadata object
+-   `object` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** the object's metadata
+
+Returns **[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;ReadStream>** resolves to a read stream for the object
+
+### getObjectStreamAtPath
+
+This function gets a stream for object data at a given path.
+
+**Parameters**
+
+-   `wadMeta` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** any valid WAD metadata object
+-   `relPath` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** the object's internal path
+
+Returns **[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;ReadStream>** resolves to a read stream for the object
 
 ### extract
 
