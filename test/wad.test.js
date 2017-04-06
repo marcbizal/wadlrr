@@ -1,5 +1,3 @@
-/* global describe before after it */
-
 const wad = require('../lib/wad.js');
 const lint = require('mocha-eslint');
 const expect = require('chai').expect;
@@ -44,12 +42,9 @@ describe('wad', () => {
     });
   });
   describe('#exists()', () => {
-    it('should expect \'Lego.cfg\' to exist, and \'Lego.config\' not to', (done) => {
-      Promise.all([
-        wad.exists(LegoRR1, 'Lego.cfg').then(exists => expect(exists).to.be.equal(true)),
-        wad.exists(LegoRR1, 'Lego.config').then(exists => expect(exists).to.be.equal(false)),
-      ])
-      .then(() => done());
+    it('should expect \'Lego.cfg\' to exist, and \'Lego.config\' not to', () => {
+      expect(wad.exists(LegoRR1, 'Lego.cfg')).to.be.equal(true);
+      expect(wad.exists(LegoRR1, 'Lego.config')).to.be.equal(false);
     });
   });
 

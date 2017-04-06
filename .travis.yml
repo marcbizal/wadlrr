@@ -1,5 +1,12 @@
 language: node_js
 node_js:
-  "node"
-after_success:
-  npm run coveralls
+- node
+after_script: npm run coveralls
+deploy:
+  provider: npm
+  email: hello@marcbizal.com
+  api_key:
+    secure: f8d84bd2-c361-4540-a555-4ffdee1ca9f0
+  on:
+    tags: true
+    repo: marcbizal/wadlrr
