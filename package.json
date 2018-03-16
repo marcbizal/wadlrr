@@ -1,6 +1,6 @@
 {
   "name": "wadlrr",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "An interface for creating, extracting, modifying, and reading LRR WAD files.",
   "main": "lib/wad.js",
   "eslintConfig": {
